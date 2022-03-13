@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet AS base
+FROM mcr.microsoft.com/dotnet/runtime:3.1 AS base
 WORKDIR /app
 EXPOSE 62210
 EXPOSE 44306
