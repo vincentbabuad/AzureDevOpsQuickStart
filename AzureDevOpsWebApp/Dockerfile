@@ -1,9 +1,9 @@
-FROM mcr.microsoft.com/dotnetAS base
+FROM mcr.microsoft.com/dotnet AS base
 WORKDIR /app
 EXPOSE 62210
 EXPOSE 44306
 
-FROM mcr.microsoft.com/dotnet/sdk AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1  AS build
 WORKDIR /src
 COPY ["AzureDevOpsWebApp/AzureDevOpsWebApp.csproj", "AzureDevOpsWebApp/"]
 RUN dotnet restore "AzureDevOpsWebApp/AzureDevOpsWebApp.csproj"
