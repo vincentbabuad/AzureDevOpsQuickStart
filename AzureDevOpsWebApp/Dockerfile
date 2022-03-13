@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/aspnet AS base
+FROM mcr.microsoft.com/dotnetAS base
 WORKDIR /app
 EXPOSE 62210
 EXPOSE 44306
