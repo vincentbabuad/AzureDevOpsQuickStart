@@ -5,7 +5,7 @@ EXPOSE 44306
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.1  AS build
 WORKDIR /src
-COPY ["AzureDevOpsWebApp/AzureDevOpsWebApp.csproj", "AzureDevOpsWebApp/"]
+COPY ["AzureDevOpsWebApp.csproj", "AzureDevOpsWebApp/"]
 RUN dotnet restore "AzureDevOpsWebApp/AzureDevOpsWebApp.csproj"
 COPY . .
 WORKDIR "/src/AzureDevOpsWebApp"
